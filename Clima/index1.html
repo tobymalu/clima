@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Clima</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-grupo {
+            margin-bottom: 20px;
+        }
+
+        .form-grupo label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-grupo input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-grupo button {
+            padding: 8px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #tabla-clima {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+
+        #tabla-clima th {
+            padding: 12px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        #tabla-clima td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        #tabla-clima tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #tabla-clima tbody tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Consulta de Clima</h1>
+
+        <div class="form-grupo">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" value="Puerto Vallarta">
+            <button onclick="consultarClima()">Consultar</button>
+        </div>
+
+        <div class="form-grupo">
+            <label for="ciudades">Ciudades</label>
+            <input type="text" id="ciudades" value="Cancun, New York, Tokyo">
+            <button onclick="consultarClimas()">Consultar</button>
+        </div>
+
+        <div>
+            <button onclick="limpiarTabla()">Limpiar</button>
+        </div>
+
+        <div>
+            <table id="tabla-clima">
+                <thead>
+                    <tr>
+                        <th>Ciudad</th>
+                        <th>Temperatura</th>
+                        <th>Descripción</th>
+                        <th>Fecha</th>
+                        <th>Clima</th> 
+                    </tr>
+                </thead>
+                <tbody>                
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

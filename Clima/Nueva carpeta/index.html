@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Clima</title>
+    <style>
+        
+        table{
+            border-collapse: collapse;
+        }
+        th{
+            border: 1px solid rgb(2, 44, 234);        
+            padding: 8px;
+            text-align: center;
+            background-color: rgba(27, 27, 240, 0.874);
+        }
+        td{
+            background-color: rgb(183, 218, 245);
+        }
+        #superior{
+            border: 4px solid rgb(247, 247, 250);
+            padding: 8px;
+            text-align: center;
+            background-color: rgb(155, 155, 173);
+         width: 70%;
+        }
+       #tablas{
+        display: grid;
+
+       }
+    </style>
+</head>
+<body>
+    <div id="superior">
+    <h1>Consulta de Clima</h1>
+    <div>
+        <label for="Ciudad">
+            Ciudad
+        </label>
+    </div>
+    <div>
+        <input type="text" id="ciudad" value="Puerto Vallarta">
+        <button onclick="consultarClima()">Consultar</button>
+ 
+    </div>
+    <div>
+        <label for="ciudades">Ciudades</label>
+    </div>
+    <div>
+        <input type="text" id="ciudades" value="Cancun, new york, tokyo">
+        <button onclick="consultarClimas()">Consultar</button>
+
+    </div>
+    <br> <br>
+    <div>
+        <button onclick="limpiarTabla()">Limpiar</button>
+    </div>
+    <br><br>
+    <div id="tablas">
+        <table id="tabla-clima">
+            <thead>
+                <tr>
+                    <th>Ciudad</th>
+                    <th>Temperatura</th>
+                    <th>Descripcion</th>
+                    <th>Fecha y Hora</th>
+                    <th>Clima</th> 
+                </tr>
+            </thead>
+            <tbody>                
+            </tbody>
+        </table>
+
+    </div>
+</div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
